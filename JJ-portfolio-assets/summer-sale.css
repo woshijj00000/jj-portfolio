@@ -1,0 +1,20 @@
+/* The supplied boards remain intact at their original proportions. */
+.ss-case { position:relative; margin:0; padding:0; background:#1d0c00; }
+.ss-reference,.ye-reference { display:block; width:100%; max-width:none; height:auto; margin:0; }
+/* Screen bounds in the 1920 × 9192 board: x=240, y=1368, w=1433, h=907.
+   The sloped glass edges and rounded top corners scale with the same board. */
+.ss-screen-wrap { position:absolute; left:12.5%; top:14.8825065274%; width:74.6354166667%; height:9.8672758921%; }
+.ss-display { position:absolute; inset:0; overflow:auto; scrollbar-width:none; background:#111; clip-path:polygon(.5% 0,99.5% 0,100% 100%,0 100%); border-radius:1% 1% 0 0; }
+.ss-display::-webkit-scrollbar { display:none; }
+.ss-display img { display:block; width:100%; max-width:none; height:auto; margin:0; }
+.ss-notch { position:absolute; top:0; left:45.4%; width:9.2%; height:1.55%; background:#171717; border-radius:0 0 5px 5px; pointer-events:none; }
+.ss-playback { position:absolute; right:10px; bottom:10px; width:30px; height:30px; padding:7px; border:1px solid #ffffff80; border-radius:50%; background:#111c; color:#fff; opacity:0; transition:opacity .15s; }
+.ss-playback svg { display:block; width:100%; height:100%; }
+.ss-playback[aria-pressed="true"] .ss-play-icon,.ss-playback[aria-pressed="false"] .ss-pause-icon { display:none; }
+.ss-screen-wrap:hover .ss-playback,.ss-screen-wrap:focus-within .ss-playback { opacity:1; }
+@media(any-hover:none) { .ss-playback { opacity:.75; } }
+.project-card img.art { object-fit:cover; object-position:center; }
+.ye-case { margin:0; padding:0; background:#eeede5; }
+
+/* Preserve the complete supplied Works covers at every window shape. */
+.works-window:not(.list-view) .project-card .art { height:auto; aspect-ratio:8 / 3; }
